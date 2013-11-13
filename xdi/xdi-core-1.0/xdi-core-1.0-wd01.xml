@@ -342,15 +342,15 @@ document made available to committee members to support the publishing process.<
     <section><title>Value &amp;</title>
       <para>Node identifying the value of an attribute. Syntax is &amp; (as final arc of a subject path)</para></section>
     <section><title>Root ( )</title>
-      <para>An XDI graph starts at a root. An XDI path may start with zero, one, or multiple root expressions. Roots are enclosed in parentheses.</para>
+      <para>An XDI graph starts at the outer root, whose XDI address is <code>()</code>. An XDI (address) path may start with zero, one, or multiple root expressions. Roots are enclosed in parentheses.</para>
       <section><title>Outer ()</title>
         <para>The outer root roots the whole graph and is expressed as ().</para></section>
       <section><title>Peer (S)</title>
-        <para>Peer root Mutability depends on the XDI address inside the xref</para></section>
+        <para>This contains an XDI address, or an IRI.</para></section>
       <section><title>Inner (S/P)</title>
-        <para>Inner root Mutability depends on the XDI address inside the xref</para></section>
+        <para>Inner root consists of a subject and predicate</para></section>
       <section><title>Statement (S/P/O)</title>
-        <para>Statement root Mutability depends on the XDI address inside the xref</para></section>
+        <para>This contains an entire XDI statement, i.e. a triple of subject/predicate/object.</para></section>
     </section>
     <section><title>Singleton</title><para>A single instance of a class</para>
       <section><title>Entity</title><para>Entity</para></section>
@@ -358,7 +358,7 @@ document made available to committee members to support the publishing process.<
     </section>
     <section><title>Collection [ ]</title><para>Collection</para>
        <section><title>Entity</title>
-         <para>An entity may contain subentities and attributes but not a value. Enclosing in brackets [ ] indicates a collection as opposed to a singleton.</para></section>
+         <para>An entity may contain entities and attributes but cannot directly contain a value. Enclosing in brackets [ ] indicates a collection as opposed to a singleton.</para></section>
        <section><title>Attribute</title>
          <para>An attribute may only contain subattributes (and, if singular, a value)</para></section>
     </section>
@@ -451,10 +451,12 @@ member-contexts         = DOWNLEVEL 1*(CTXTSEP member-context) UPLEVEL
       <para>An XDI path can contain roots, then entities, then attributes, then value, in that order. Each of those elements is optional, except that a value must be preceded by an attribute singleton or attribute member.</para>
 
 <programlisting>
-xdi-path          = *root-node *entity-node *attribute-node [ attribute-value ]
+xdi-address       = *root-node *entity-node *attribute-node [ attribute-value ]
+entity-path       = *entity-node
 entity-node       = ( entity-singleton    / ( entity-collection     *entity-member ) )
+attribute-path    = *attribute-node
 attribute-node    = ( attribute-singleton / ( attribute-collection  *attribute-member ) ) 
-attribute-value   = ( attribute-singleton / ( attribute-collection 1*attribute-member ) ) value 
+attribute-value   = ( attribute-singleton / ( attribute-collection 1*attribute-member ) ) json-value 
 </programlisting>
       <para>The following section is probably obsolete. Please confirm.</para>
 <programlisting>
@@ -511,7 +513,7 @@ reserved-type           = "$" SYMSEP xdi-identifier
 
 attribute-singleton     = "&lt;" SYMSEP type-singleton "&gt;"   ;need to remove > for parsed format
 
-entity-collection       = authority-collection / type-collection / member-collection
+entity-collection       = authority-collection / type-collection / general-collection
 authority-collection    = person-collection    / legal-collection
 person-collection       = "[=]" SYMSEP ; need to remove ] if we make it two levels
 legal-collection        = "[@]" SYMSEP 
@@ -520,13 +522,18 @@ reserved-collection     = "[" SYMSEP   reserved-type "]"
 unreserved-collection   = "[" SYMSEP unreserved-type "]"
 
 general-collection      = ordered-collection   / unordered-collection / singleton-collection
+ordered-collection      = "[#]" SYMSEP 
+unordered-collection    = "[!]" SYMSEP 
 singleton-collection    = "[*]" SYMSEP 
 
 attribute-collection    = "[" attribute-singleton "]"
 
+entity-member           = member 
 member                  = ordered-member / unordered-member
 ordered-member          = "#" SYMSEP ( ( %x31-39 DIGIT ) / "0" )                         ; No leading zeros
 unordered-member        = "!" SYMSEP ( xref / xdi-scheme / xdi-identifier )
+
+attribute-member        = "&lt;" SYMSEP member "&gt;" 
 
 definition              = authority-definition / type-definition
 authority-definition    = "$(" SYMSEP ( authority-singleton / authority-path ) ")"
