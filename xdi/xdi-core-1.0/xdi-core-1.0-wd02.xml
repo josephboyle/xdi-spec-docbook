@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" 
-href="../../htmlruntime/spec-0.6/stylesheets/oasis-specification-html.xsl"?>
+href="../../htmlruntime/spec-0.6/stylesheets/oasis-specification-html-offline.xsl"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "https://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"
 [
 <!ENTITY title "XDI Core V&version;"> <!ENTITY name "xdi-core"> <!ENTITY pversion "0.1"> <!ENTITY version "1.0">
@@ -8,8 +8,8 @@ href="../../htmlruntime/spec-0.6/stylesheets/oasis-specification-html.xsl"?>
 <!ENTITY this-loc "http://docs.oasis-open.org/xdi/spec-&version;"> <!ENTITY previous-loc "http://docs.oasis-open.org/xdi/spec-&pversion;"> <!ENTITY latest-loc "http://docs.oasis-open.org/xdi/spec">
 ]>
 
-<!--DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "https://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"-->
-<!--DOCTYPE article PUBLIC "-//OASIS//DTD DocBook SVG Module V1.1CR1//EN" "http://www.oasis-open.org/docbook/xml/svg/1.1CR1/dbsvg.dtd"-->
+<!--!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN" "https://www.oasis-open.org/docbook/xml/4.4/docbookx.dtd"?-->
+<!--!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook SVG Module V1.1CR1//EN" "http://www.oasis-open.org/docbook/xml/svg/1.1CR1/dbsvg.dtd"?-->
 
 <article status="&standard;" xmlns="http://docbook.org/ns/docbook" version="5.0" xml:lang="en">
 <articleinfo>
@@ -17,7 +17,7 @@ href="../../htmlruntime/spec-0.6/stylesheets/oasis-specification-html.xsl"?>
 <productname>&name;</productname>
 <productnumber>&version;-&stage;</productnumber>
 <releaseinfo role="track">Standards Track Work Product</releaseinfo>
-<releaseinfo role="OASIS-specification-this-authoritative">&this-loc;/&name;-&version;-&stage;.xml</releaseinfo>
+<!--releaseinfo role="OASIS-specification-this-authoritative">&this-loc;/&name;-&version;-&stage;.xml</releaseinfo>
 <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&version;-&stage;.pdf</releaseinfo>
 <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&version;-&stage;.html</releaseinfo>
 <releaseinfo role="OASIS-specification-previous-authoritative">&previous-loc;/&name;-&pversion;.xml</releaseinfo>
@@ -25,7 +25,7 @@ href="../../htmlruntime/spec-0.6/stylesheets/oasis-specification-html.xsl"?>
 <releaseinfo role="OASIS-specification-previous">&previous-loc;/&name;-&pversion;.html</releaseinfo>
 <releaseinfo role="OASIS-specification-latest-authoritative">&latest-loc;/&name;.xml</releaseinfo>
 <releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.pdf</releaseinfo>
-<releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.html</releaseinfo>
+<releaseinfo role="OASIS-specification-latest">&latest-loc;/&name;.html</releaseinfo-->
 <releaseinfo role="committee"><ulink url="http://www.oasis-open.org/committees/xdi">OASIS XDI TC</ulink></releaseinfo>
 <authorgroup>
   <editor> <firstname>Joseph</firstname><surname>Boyle</surname>
@@ -43,16 +43,16 @@ href="../../htmlruntime/spec-0.6/stylesheets/oasis-specification-html.xsl"?>
 <holder>OASIS Open, Inc. All Rights Reserved.</holder></copyright>
  <legalnotice role="additional"><title>Additional artifacts</title>
  <para>This prose specification is one component of a Work Product which also includes:</para>
- <itemizedlist spacing="compact"> <listitem><para>
+ <!--itemizedlist spacing="compact"> <listitem><para>
 publishing materials: <ulink url="&this-loc;/&name;-&version;-&stage;.zip">&this-loc;/&name;-&version;-&stage;.zip</ulink></para>
- </listitem> </itemizedlist>
+ </listitem> </itemizedlist-->
 </legalnotice>
 <legalnotice role="related"><title>Related work</title>
   <para>This document is primarily based on a set of proposals that had been collected by the OASIS XDI TC on its associated wiki at <ulink url="https://wiki.oasis-open.org/xdi/">https://wiki.oasis-open.org/xdi/</ulink>.</para>
 </legalnotice>
 
 <abstract><title>Abstract</title>
-  <para>This working draft specifies the abstract pattern for all XDI core together with the binding to the http/https protocol for performing XDI operations using XDI messages.</para>
+  <para>This working draft is for reviewer comment only and is not yet a standards document or published at OASIS. It specifies the abstract pattern for all XDI core together with the binding to the http/https protocol for performing XDI operations using XDI messages.</para>
 </abstract>
 
 <!--legalnotice role="status"><title>Status</title>
@@ -63,13 +63,13 @@ document made available to committee members to support the publishing process.<
 </legalnotice-->
 <legalnotice role="citation"><title>Citation format</title>
 <para>When referencing this specification the following citation format should be used:</para>
-<bibliolist> <bibliomixed>
+<!--bibliolist> <bibliomixed>
   <abbrev>OASIS-XDI-Core-V1.0</abbrev>
   <title>OASIS XDI Core V1.0</title>
   <date>&pubdate;. </date>
   <releaseinfo>OASIS &standard;. </releaseinfo>
   <citetitle><ulink url="&latest-loc;/&name;.html">&latest-loc;/&name;.html</ulink>.</citetitle>
-</bibliomixed> </bibliolist>
+</bibliomixed> </bibliolist-->
 </legalnotice>
 <legalnotice role="notices"><title>Notices</title>
 <para>Copyright &#169; OASIS&#174; Open 2013. All Rights Reserved.  </para>
@@ -261,8 +261,8 @@ document made available to committee members to support the publishing process.<
 
 
   <section><title>The XDI Graph Model</title>
-   <para>Given the design goals above, the XDI TC has developed the semantic graph model defined in this section. Figure 1 shows a high-level taxonomy of the XDI graph model. 
-   <figure float="true"><title>XDI Node Types: Below node type name, XDI graph notation symbols are listed in black, XDI syntax in red.</title>
+   <para>Given the design goals above, the XDI TC has developed the semantic graph model defined in this section. Figure 1 shows a high-level taxonomy of the XDI graph model. The diagram shows the hierarchy of node types; the diagram is not an XDI graph.
+   <figure xml:id="nodetypes1" float="true"><title>XDI Node Types: Below node type name, XDI graph notation symbols are listed in black, XDI syntax in red.</title>
     <mediaobject><imageobject>
      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="200" style="float:right">
        <defs>
@@ -273,6 +273,11 @@ document made available to committee members to support the publishing process.<
            text.syntax { font-family: monospace; font-size: 16px; fill: #e40; }
            circle { stroke-width: 2 }
          ]]></style>
+         <circle id="root"   cx="0" cy="0" r="7"  stroke="black" fill="none" viewBox="-10 -10 10 10"/>
+         <circle id="entity" cx="0" cy="0" r="7"  stroke="black" fill="black" viewBox="-10 -10 10 10"/>
+         <path   id="attrib" d="M -0 -7 l 11 7 l -11 7 l -11 -7 Z" fill="black" viewBox="-10 -10 10 10"/>
+         <path   id="value"  d="M -0 -7 l 11 7 l -11 7 l -11 -7 Z" fill="none" viewBox="-10 -10 10 10"/>
+         <path  id="literal" d="M -17 11 l 14 0 l 0 14 l -14 0 Z" fill="none" viewBox="-10 -10 10 10" />
        </defs>
        <g transform="translate(0,10)" text-anchor="middle" dominant-baseline="middle">
            <g transform="translate(250,00)">
@@ -286,6 +291,7 @@ document made available to committee members to support the publishing process.<
              <rect class="layer" x="-30" y="-8" width="60" height="35"/>
              <text>Literal</text>
              <!--path d="M -17 11 l 14 0 l 0 14 l -14 0 Z" fill="none"/-->
+             <use x="10" y="0" xlink:href="#literal"/>
            </g> <g transform="translate(400,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-30" y="-8" width="60" height="35"/>
              <text>Variable</text>
@@ -295,6 +301,7 @@ document made available to committee members to support the publishing process.<
            <g transform="translate(85,100)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-85" y="-8" width="170" height="35"/>
              <text>Graph Root</text>
+             <use x="0" y="15" xlink:href="#root"/>
              <circle cx="-0" cy="16" r="7" stroke="black" fill="none"/>
            </g> <g transform="translate(33,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-33" y="-8" width="66" height="35"/>
@@ -312,25 +319,27 @@ document made available to committee members to support the publishing process.<
            <g transform="translate(310,100)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-125" y="-8" width="250" height="35"/>
              <text>Subgraph</text>
-           </g> <g transform="translate(340,150)"> <path d="M 0 -8 v -15"/>
+           </g> <!--g transform="translate(340,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-25" y="-8" width="50" height="35"/>
              <text>Value</text>
              <text x="14" y="18" class="syntax">&amp;</text>
-             <path d="M -11 10 l 11 7 l -11 7 l -11 -7 Z" fill="none"/>
-           </g> <g transform="translate(210,150)"> <path d="M 0 -8 v -15"/>
+             <use x="-10" y="17" xlink:href="#value"/>
+           </g--> <g transform="translate(210,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-25" y="-8" width="50" height="35"/> 
              <text>Entity</text>
-             <circle cx="-11" cy="18" r="7" stroke="black" fill="black"/>
+             <!--circle cx="-11" cy="18" r="7" stroke="black" fill="black"/-->
+             <use x="-10" y="17" xlink:href="#entity"/>
            </g> <g transform="translate(275,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-35" y="-8" width="70" height="35"/>
              <text>Attribute</text>
              <text x="17" y="18" class="syntax">&lt;&#8212;&gt;</text>
              <path d="M -17 10 l 11 7 l -11 7 l -11 -7 Z"/>
+             <use x="-17" y="17" xlink:href="#attrib"/>
            </g>
         </g>
      </svg>
 
-     <imagedata fileref="xdi-nodes.png"/>
+     <!--imagedata fileref="xdi-nodes.png"/-->
     </imageobject>
       <textobject><phrase>XDI Node Types</phrase></textobject>
     </mediaobject></figure>
@@ -350,7 +359,7 @@ document made available to committee members to support the publishing process.<
 
   <section><title>Node Types</title>
     <!--para>This section defines each of the node types in the XDI graph model. The complete taxonomy of node types, together with a key to the XDI syntax used for each, is shown in Figure 2.</para-->
-     <figure><title>XDI Entity/Attribute Node Types (Detailed): Entity syntax on left, Attribute syntax on right</title>
+     <figure xml:id="nodetypes2"><title>XDI Entity/Attribute Node Types (Detailed): Entity syntax on left, Attribute syntax on right</title>
      <mediaobject><imageobject>
      <svg width="500" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" style="float:right">
        <!--defs>
@@ -387,15 +396,15 @@ document made available to committee members to support the publishing process.<
            </g> <g transform="translate(-220,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-35" y="-8" width="70" height="35"/>
              <text>Personal</text>
-             <text y="18" class="syntax">= &lt;=&gt;</text>
+             <text y="18" class="syntax">=x</text>
            </g> <g transform="translate(-155,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-25" y="-8" width="50" height="35"/>
              <text>Legal</text>
-             <text y="18" class="syntax">+ &lt;+&gt;</text>
+             <text y="18" class="syntax">+x</text>
            </g> <g transform="translate(-95,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-30" y="-8" width="60" height="35"/>
              <text>General</text>
-             <text y="18" class="syntax">* &lt;*&gt;</text>
+             <text y="18" class="syntax">*x</text>
            </g>
 
            <g transform="translate(20,100)"> <path d="M -30 -8 v -15"/>
@@ -404,11 +413,11 @@ document made available to committee members to support the publishing process.<
            </g> <g transform="translate(-20,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-35" y="-8" width="70" height="35"/>
              <text>Reserved</text>
-             <text y="18" class="syntax">$ &lt;$&gt;</text>
+             <text y="18" class="syntax">$x &lt;$x&gt;</text>
            </g> <g transform="translate(60,150)"> <path d="M 0 -8 v -15"/>
              <rect class="layer" x="-40" y="-8" width="80" height="35"/>
              <text>Unreserved</text>
-             <text y="18" class="syntax"># &lt;#&gt;</text>
+             <text y="18" class="syntax">#x &lt;#x&gt;</text>
            </g>
 
            <g transform="translate(190,50)"> <path d="M 0 -8 v -15"/>
@@ -418,15 +427,15 @@ document made available to committee members to support the publishing process.<
            </g> <g transform="translate(150,150)"> <path d="M 0 -8 v -65"/>
              <rect class="layer" x="-35" y="-8" width="70" height="35"/>
              <text>Unordered</text>
-             <text y="18" class="syntax">! &lt;!&gt;</text>
+             <text y="18" class="syntax">!x &lt;!x&gt;</text>
            </g> <g transform="translate(220,150)"> <path d="M 0 -8 v -65"/>
              <rect class="layer" x="-30" y="-8" width="60" height="35"/>
              <text>Ordered</text>
-             <text y="18" class="syntax">@ &lt;@&gt;</text>
+             <text y="18" class="syntax">@0 &lt;@0&gt;</text>
            </g>
         </g>
      </svg>
-      <imagedata fileref="xdi-nodes-detailed.png"/></imageobject>
+      <!--imagedata fileref="xdi-nodes-detailed.png"/--></imageobject>
       <textobject><phrase>XDI Node Types (Detailed)</phrase></textobject>
      </mediaobject></figure>
     </section>
@@ -451,7 +460,7 @@ document made available to committee members to support the publishing process.<
       </orderedlist>
       <para>There are three types of XDI graph root nodes.</para>
       <section><title>The Common Root Node</title>
-        <para>Every XDI graph has exactly one <firstterm>common root node</firstterm>. It is called the common root because it the one logical node shared by all XDI graphs. To use the analogy of trees in a forest, if every tree represents an XDI graph, the common root node of all the trees is the earth.</para>
+        <para>Every XDI graph has exactly one <firstterm>common root node</firstterm>. It is called the common root because it is the one logical node shared by all XDI graphs. To use the analogy of trees in a forest, if every tree represents an XDI graph, the common root node of all the trees is the earth.</para>
         <para>The XDI address of the common root node is the <firstterm>empty address</firstterm>. Thus any XDI statement that does not begin with a peer root address or an inner root address is by definition relative to the common root node.</para></section>
       <section><title>Peer Root Nodes</title>
         <para>An XDI graph MAY describe zero or more <firstterm>peer graphs</firstterm>, each with its own <firstterm>peer root node</firstterm>. A peer root node represents an independent XDI graph with its own XDI address. In most cases this XDI address will be at a different network endpoint that the current XDI graph. However the common root node of an XDI graph may also describe its own XDI address by virtue of an XDI reference statement to a peer root node.</para>
@@ -467,7 +476,7 @@ document made available to committee members to support the publishing process.<
       </section>
       <section><title>Inner Root Nodes</title>
         <para>An <firstterm>inner graph</firstterm> is a graph-within-a-graph. Unlike a peer root graph, an inner root graph represents the set of XDI statements that are the object of another XDI statement. In RDF this is known as reification.<xref linkend='reification'/></para>
-        <para>The XDI address of an <firstterm>inner root node</firstterm> MUST consist of two XDI address segments—an XDI subject followed by an XDI relational predicate—enclosed in parentheses. This XDI address MUST NOT be preceeded by an XDI context symbol. Examples:</para>
+        <para>The XDI address of an <firstterm>inner root node</firstterm> consists of parentheses containing two XDI address segments (an XDI subject followed by an XDI relational predicate) separated by a slash. The parentheses are not preceded by an XDI context symbol. Examples:</para>
         <para><code>(=example.1/#nominated)</code></para>
         <para><code>(+company.1/#acquired)</code></para>
         <para>Examples of XDI statements that begin with these peer root addresses:</para>
@@ -476,19 +485,16 @@ document made available to committee members to support the publishing process.<
         <para>Because an inner graph represents the object(s) of an XDI relational statement, it differs from a peer graph in one key respect: the XDI statements contained by an inner graph are relative only to that particular inner root node and cannot be copied to another XDI graph without copying that same inner root node.</para></section>
     </section>
       <section><title>Subgraphs</title>
-        <para>A <firstterm>subgraph</firstterm> is a branch of an XDI graph that does not begin with a root node. A subgraph MUST begin with an entity, attribute, or value node. See the definitions of these node types below.</para>
+        <para>A <firstterm>subgraph</firstterm> is a branch of an XDI graph that does not begin with a root node. A subgraph MUST begin with an entity or attribute node. See the definitions of these node types below.</para>
       <section><title>Variables</title> 
-        <para>A <firstterm>variable</firstterm> is a node serves as a template or a query for other XDI graphs. A variable node MUST represent a set of zero or more nodes in the instance graph. A variable MAY represent any type of XDI graph node. A variable MAY be typed by containing the XDI address of a class. If a variable is typed, a valid instance of that variable MUST be a valid instance of that class.</para></section>
-      <section><title>Entities</title><para>An <firstterm>entity</firstterm> node represents the digital identity of any independent physical or logical resource other than an XDI graph. An entity MUST be either an authority, an entity class, or an instance of an entity class. An entity MAY contain another entity (a <firstterm>subentity</firstterm>) or an attribute. An entity MUST NOT contain a value.</para></section>
-      <section><title>Attributes</title><para>An <firstterm>attribute node</firstterm> represents a property of its parent graph, entity, or attribute. An attribute MAY contain another attribute (a <firstterm>subattribute</firstterm>). An attribute MAY contain exactly one value node. Note that only attributes may contain value nodes. An XDI graph root node or entity node MUST NOT contain a value node directly, only attribute nodes that have value nodes.</para>
-      <para>The XDI address of an attribute node MUST be contained in chevrons (angle brackets) “<code>&lt;</code>” and “<code>&gt;</code>”. (An attribute definition or collection has additional containing syntax—see the ABNF section.)</para></section>
-      <section><title>Values</title>
-      <para>A <firstterm>value</firstterm> node represents the abstract XDI address of the literal value of an XDI attribute. A value node MUST be a singleton node (see below). Because an attribute node can only have one value node, and because that value node is always relative to its containing attribute node, all XDI value nodes MUST be identified using a single XDI context symbol: the ampersand character “<code>&amp;</code>”.</para>
-      <para>An attribute node is NOT REQUIRED to have a value node. A value node MAY have exactly one literal node describe by one XDI literal arc. A value node is NOT REQUIRED to have a literal node.</para>
-      <para>If an attribute node does not have a value node, the literal value of the attribute SHOULD be in indeterminate.</para>
-      <para>If an attribute node has a value node, but the value node does not have a literal node, the literal value of the attribute SHOULD be indeterminate.</para>
-      <para>If an attribute node has a value node, and value node has a literal node, the literal value of the attribute MUST be an XDI literal data type. The literal value MAY be the XDI data type representing a null value. In the JSON serialization, this is the JSON <code>null</code> value.</para></section>
-    </section>
+        <para>A <firstterm>variable</firstterm> is a node that serves as a template or a query for other XDI graphs. A variable node MUST represent a set of zero or more nodes in the instance graph. A variable MAY represent any type of XDI graph node. A variable MAY be typed by containing the XDI address of a class. If a variable is typed, a valid instance of that variable MUST be a valid instance of that class.</para></section>
+      <section><title>Entities</title><para>An <firstterm>entity</firstterm> node represents the digital identity of any independent physical or logical resource other than an XDI graph. An entity MUST be either an authority, an entity class, or an instance of an entity class. (See <xref linkend="nodetypes2"/>) An entity MAY contain another entity (a <firstterm>subentity</firstterm>) or an attribute. An entity MUST NOT contain a literal.</para></section>
+      <section><title>Attributes</title><para>An <firstterm>attribute node</firstterm> represents a property of its parent graph, entity, or attribute. An attribute MAY contain another attribute (a <firstterm>subattribute</firstterm>). An attribute MAY contain exactly one literal node. Note that only attributes, not entities, may directly contain literal nodes.</para>
+      <para> An XDI graph root node or entity node MUST NOT contain a literal node directly, only attribute nodes that have literal nodes.</para>
+      <para>The XDI address of an attribute node MUST be contained in the angle brackets “<code>&lt;</code>” and “<code>&gt;</code>”. (An attribute definition or collection has additional containing syntax—see the ABNF section.)</para></section>
+      <para>A <firstterm>value address</firstterm> represents the abstract XDI address of the literal value of an XDI attribute.  It is formed by appending the ampersand character “<code>&amp;</code>” to the address of the attribute context node.</para>
+      <para>If an attribute node does not have a literal node, the literal value of the attribute is <firstterm>indeterminate</firstterm>.</para>
+      <para>If an attribute node has a literal node, the literal value of the attribute MUST be an XDI literal data type. The literal value MAY be the XDI data type representing a null value. In the JSON serialization, this is the JSON <code>null</code> value.</para></section>
     <section><title>Definitions</title><para>A <firstterm>definition</firstterm> node represents the start of a subgraph defining or qualifying the definition of an XDI entity or attribute. Definitions are how XDI meets the <firstterm>Schema and Ontology Expression</firstterm> design goal of <xref linkend="schema"/>.</para>
       <para>The XDI address of a definition node MUST be enclosed in pipe characters “<code>|</code>” and “<code>|</code>”. The entity and attribute vocabulary used by XDI definitions will be specified in the XDI Dictionary specification.</para>
     </section>
@@ -524,7 +530,7 @@ There are three types of XDI authorities forming supersets of each other as show
        <text y="85">General</text>
        </g>
      </svg>
-     <imagedata fileref="xdi-authorities.png"/>
+     <!--imagedata fileref="xdi-authorities.png"/-->
     </imageobject>
       <textobject><phrase>XDI Authority Types</phrase></textobject>
     </mediaobject></figure>
@@ -552,7 +558,7 @@ There are two other types of XDI classes.</para>
   <member>$not</member>
   <member>$public</member>
 </simplelist>
-<para>An reserved class name MUST be interpreted as an immutable XDI address.</para>
+<para>A reserved class name MUST be interpreted as an immutable XDI address.</para>
 <para>A reserved class name MUST be defined in a specification from the OASIS XDI Technical Committee (including this specification) or by another OASIS Technical Committee or another standards body specified by the OASIS XDI Technical Committee.</para></section>
       <section><title>Unreserved #</title>
         <para>The <firstterm>unreserved</firstterm> class is the set of XDI classes defined by other XDI authorities. The XDI address of an unreserved class MUST begin with the context symbol “<code>#</code>”. Unreserved class names are typically defined in XDI dictionaries. For this reason they are also called <firstterm>hash words</firstterm> or <firstterm>dictionary words</firstterm>. Examples:</para>
@@ -568,33 +574,39 @@ There are two other types of XDI classes.</para>
 <para>This begs the question of authority for generic XDI dictionary words. Since they represent a community consensus about shared semantics, it is RECOMMENDED that generic XDI dictionary words be specified in XDI community dictionaries cooperatively maintained by the set of XDI authorities who wish to contribute to the community. This is the model popularized (and proven to scale) by Wikipedia for human-readable encyclopedia articles.</para>
 <para>XDI.org is one example of a non-profit community organization whose mission includes the cooperative development of XDI dictionaries.</para></section></section>
     </section>
-  <section><title>Statement Types</title><para>As with an RDF graph, an XDI graph consists of a set of one or more <firstterm>XDI statements</firstterm>. Each XDI statement MUST have a <firstterm>subject</firstterm>, <firstterm>predicate</firstterm>, and <firstterm>object</firstterm> (even if one or more of these is the empty address). Every XDI statement MUST represent exactly one arc in the XDI graph model, and every arc in the XDI graph model MUST represent exactly one XDI statement.</para>
+  <section><title>Statement Types</title><para>As with an RDF graph, an XDI graph consists of a set of one or more <firstterm>XDI statements</firstterm>. Each XDI statement MUST have a <firstterm>subject</firstterm>, <firstterm>predicate</firstterm>, and <firstterm>object</firstterm> which are each (possibly empty) XDI addresses, except for the object of a literal statement.</para>
+      <para>An XDI statement uniquely represents an arc (including the addreses of its starting and ending nodes) possible in the XDI graph model, and every arc in the XDI graph model is uniquely represented by one XDI statement.</para>
       <para>In XDI display format (see below), the XDI addresses for the subject, predicate, and object of the statement are separated by the forward slash character “<code>/</code>”, so each component is called a <firstterm>segment</firstterm>.</para>
-      <para>There are three types of XDI statements.</para>
+      <para>There are three types of XDI statements:</para>
     <section><title>Literal Statements</title>
       <para>A <firstterm>literal statement</firstterm> represents exactly one <firstterm>literal arc</firstterm> in the XDI graph model. It specifies the literal value of an XDI attribute. In a literal statement:</para>
-<orderedlist><listitem>The XDI address of the subject MUST end in an attribute singleton or a member of an attribute collection followed by an ampersand character “<code>&amp;</code>”.</listitem> 
-<listitem>The XDI address of the predicate by the ampersand character “<code>&amp;</code>”.</listitem>
-<listitem>The XDI address of the object MUST be the literal data value as specified by the serialization format.</listitem></orderedlist>
-<para>There is no inverse of a literal statement. Example:</para>
-<para><code>=forrest.gump&lt;#email&gt;&amp;/&amp;/”forrest.gump@example.com”</code></para></section>
+<orderedlist><listitem>The subject is an XDI context node whose XDI address MUST end in an attribute singleton or a member of an attribute collection.</listitem> 
+<listitem>The predicate is the ampersand character “<code>&amp;</code>”.</listitem>
+<listitem>The object is the literal data value encoded as specified by the serialization format, e.g. a JSON value. It does not follow the XDI address format.</listitem></orderedlist>
+<para>Note: Pre-1.0 versions of XDI used an additional ampersand at the end of the subject address.</para>
+<para>Example:</para>
+<para><code>=forrest.gump&lt;#email&gt;/&amp;/”forrest.gump@example.com”</code></para></section>
+<para>A literal statement does not have an inverse.</para>
     <section><title>Relational Statements</title>
-      <para>A <firstterm>relational</firstterm> statement represents exactly one <firstterm>relational arc</firstterm> in the XDI graph model. It specifies the relationship of two XDI context nodes. In a relational statement:</para>
-<orderedlist><listitem>The XDI address of the subject MAY be any XDI context node.</listitem>
-<listitem>The XDI address of the predicate MAY be any XDI relation for which the subject node is a valid domain. Reserved classes are used for a small set of universally defined XDI relations. (See the Equivalent Relations section below.)</listitem>
+      <para>A <firstterm>relational</firstterm> statement uniquely represents a <firstterm>relational arc</firstterm> (including its endpoint addresses) possible in the XDI graph model. It specifies a relationship, labeled by the predicate, between the two XDI context nodes. In a relational statement:</para>
+<orderedlist><listitem>The XDI address of the subject MUST be any XDI context node.</listitem>
+<listitem>The XDI address of the predicate MUST be any XDI relation for which the subject node is a valid domain. Reserved classes are used for a small set of universally defined XDI relations. (See the Equivalent Relations section below.)</listitem>
 <listitem>The XDI address of the object MUST be another XDI context node. The object node MUST be in the valid range for the specified relation.</listitem></orderedlist>
-<para>The inverse of any relational statement MAY be asserted by: a) reversing the subject and object components, and b) putting the XDI address of the relation in the <code>$is</code> context. Example:</para>
+<para>A relational statement has an inverse constructed by: a) reversing the subject and object components, and b) putting the XDI address of the relation in the <code>$is</code> context, that is, prefixing the predicate with <code>$is</code>. Example: Given this statement:</para>
 <para><code>=forrest.gump/#mother/=mama.gump</code></para>
+<para>its inverse is:</para>
 <para><code>=mama.gump/$is#mother/=forrest.gump</code></para></section>
     <section><title>Contextual Statements</title>
-      <para>A <firstterm>contextual statement</firstterm> represents exactly one <firstterm>contextual arc</firstterm> in the XDI graph model. It specifies the relationship of two XDI context nodes. In a relational statement:</para>
+      <para>A <firstterm>contextual statement</firstterm> represents exactly one <firstterm>contextual arc</firstterm> in the XDI graph model. It specifies the relationship of two XDI context nodes. In a contextual statement:</para>
       <orderedlist>
-        <listitem>The XDI address of the subject MAY be any XDI context node except a value node (since value nodes are the leaf nodes of an XDI context tree). If the subject is the common root node, the XDI address is empty.</listitem>
-        <listitem>The XDI address of the predicate MUST be the empty address.</listitem>
-        <listitem>The XDI address of the object MUST be the contained XDI context node. In addition, the concatenation of the XDI address of the subject of the contextual statement and the object of the contextual statement MUST produce a valid XDI address according to the rules of the XDI ABNF (below).</listitem>
+        <listitem>The subject is any XDI context node. If the subject is the common root node, the XDI address is empty.</listitem>
+        <listitem>The XDI address of the predicate is the empty address.</listitem>
+        <listitem>The XDI address of the object is the contained XDI context node.</listitem>
+        <listitem>The concatenation of the subject address and the object address MUST produce a valid XDI address.</listitem>
       </orderedlist>
-The inverse of any contextual statement MAY be asserted by: a) reversing the subject and object components, and b) using the <code>$is()</code> predicate. Example:
+A contextual statement has an inverse statement constructed by: a) exchanging the subject and object components, and b) using the <code>$is()</code> predicate. Example: For the statement:
 <para><code>=forrest.gump//&lt;#email&gt;</code></para>
+<para>its inverse is:</para>
 <para><code>&lt;#email&gt;/$is()/=forrest.gump</code></para></section>
   </section>
   <section><title>XDI Graph and Statement Grammars</title>
@@ -683,8 +695,8 @@ class-singleton      = unreserved-class / reserved-class
 person-singleton     = "=" C-I ( xdi-name / xref / xdi-scheme )
 legal-singleton      = "+" C-I ( xdi-name / xref / xdi-scheme )
 general-singleton    = "*" C-I ( xdi-name / xref / xdi-scheme )
-unreserved-type      = "#" C-I ( xdi-name / xref / xdi-scheme )
-reserved-type        = "$" C-I   xdi-name
+unreserved-class     = "#" C-I ( xdi-name / xref / xdi-scheme )
+reserved-class       = "$" C-I   xdi-name
 
 entity-collection    = authority-collection / class-collection 
 authority-collection = person-collection    / legal-collection / general-collection
@@ -719,7 +731,7 @@ authority-definition = DEFL C-I   authority-node DEFR
 authority-node       = ( authority-singleton / ( authority-collection [ member ] ) )
 
 variable             = VARL [ xdi-address ] VARR
-value-arc            = "&amp;"
+value-arc            = 	// Was formerly "&amp;"
 </programlisting>
       <para>Bracketing delimiters used are:</para>  
 <programlisting>

@@ -39,7 +39,7 @@ href="http://docs.oasis-open.org/templates/DocBook/spec-0.6/stylesheets/oasis-sp
 <!ENTITY previous-loc "http://docs.oasis-open.org/templates/DocBook/spec-&pversion;">
 <!ENTITY latest-loc "http://docs.oasis-open.org/templates/DocBook/oasis-specification">
 <!ENTITY pubdate "25 July 2013">
-<!ENTITY title "XDI Signatures V&version;">
+<!ENTITY title "XDI Connections V&version;">
 ]>
 <article status="&standard;">
 
